@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuvam Mobilya – Evinizi Hayallerinizle Buluşturun</title>
+  <meta name="description" content="Yuvam Mobilya – Premium kalitede salon, yatak odası ve yemek odası mobilyaları. Verona, Derin ve Latte koleksiyonları ile hayalinizdeki evi yaratın." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <!-- LOGO -->
+      <a href="#" class="nav-logo" id="homeLink">
+        <img src="pictures/yuvam_mobilya_logo.png" alt="Yuvam Mobilya" class="logo-img" style="height: 44px; object-fit: contain;">
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Anasayfa</a></li>
+        <li><a href="#categories" class="nav-link">Kategoriler</a></li>
+        <li><a href="#products" class="nav-link">Koleksiyonlar</a></li>
+        <li><a href="#about" class="nav-link">Hakkımızda</a></li>
+        <li><a href="#contact" class="nav-link">İletişim</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-icon-btn" id="searchBtn" title="Ara" aria-label="Ara">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="nav-icon-btn" id="wishlistBtn" title="Favoriler" aria-label="Favoriler">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span class="badge" id="wishlistBadge" style="display:none">0</span>
+        </button>
+        <button class="nav-icon-btn cart-btn" id="cartBtn" title="Sepet" aria-label="Sepet">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="badge" id="cartBadge">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menü">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════
+       SEARCH OVERLAY
+  ═══════════════════════════════════════════════ -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-box">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" placeholder="Verona, Latte, Derin..." />
+      <button id="searchClose">✕</button>
+    </div>
+    <div class="search-suggestions">
+      <span>Koleksiyonlar:</span>
+      <button onclick="document.getElementById('searchInput').value='Verona'">Verona Koltuk</button>
+      <button onclick="document.getElementById('searchInput').value='Derin'">Derin Yemek</button>
+      <button onclick="document.getElementById('searchInput').value='Latte'">Latte Yatak</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img
+        src="pictures/Verona_koltuk_takımı_1.jpeg"
+        alt="Verona Koltuk Takımı – Yuvam Mobilya"
+        class="hero-img"
+      />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">✦ 2024 Yeni Koleksiyon</div>
+      <h1 class="hero-title">
+        Evinizi<br />
+        <em class="gradient-text">Hayallerinizle</em><br />
+        Buluşturun
+      </h1>
+      <p class="hero-desc">
+        El işçiliği ve modern tasarımın buluştuğu, her köşesi özenle tasarlanmış
+        premium mobilya koleksiyonları ile evinizi dönüştürün.
+      </p>
+      <div class="hero-cta">
+        <a href="#products" class="btn btn-primary">Koleksiyonu Keşfet</a>
+        <a href="#contact" class="btn btn-outline">Ücretsiz Danışmanlık</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">15K+</span>
+          <span class="stat-label">Mutlu Müşteri</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Ürün Çeşidi</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">18</span>
+          <span class="stat-label">Yıllık Tecrübe</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Keşfet</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       MARQUEE
+  ═══════════════════════════════════════════════ -->
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <span>✦ Ücretsiz Kargo</span>
+      <span>✦ 5 Yıl Garanti</span>
+      <span>✦ Ücretsiz Montaj</span>
+      <span>✦ 30 Gün İade</span>
+      <span>✦ Kapıda Ödeme</span>
+      <span>✦ 0 Faiz 12 Taksit</span>
+      <span>✦ Premium Kalite</span>
+      <span>✦ Ücretsiz Kargo</span>
+      <span>✦ 5 Yıl Garanti</span>
+      <span>✦ Ücretsiz Montaj</span>
+      <span>✦ 30 Gün İade</span>
+      <span>✦ Kapıda Ödeme</span>
+      <span>✦ 0 Faiz 12 Taksit</span>
+      <span>✦ Premium Kalite</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       CATEGORIES
+  ═══════════════════════════════════════════════ -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Kategoriler</p>
+        <h2 class="section-title">Evin Her Odası<br />İçin Mükemmel</h2>
+      </div>
+      <div class="categories-grid">
+        <div class="cat-card cat-living" onclick="scrollToProduct('verona')">
+          <div class="cat-bg-img" style="background-image:url('pictures/Verona_koltuk_takımı_2.jpeg')"></div>
+          <div class="cat-overlay"></div>
+          <div class="cat-content">
+            <div class="cat-icon">🛋️</div>
+            <h3>Salon</h3>
+            <p>Koltuk Takımları &amp; Sehpalar</p>
+            <span class="cat-count">Verona Koleksiyonu</span>
+          </div>
+        </div>
+        <div class="cat-card cat-dining" onclick="scrollToProduct('derin')">
+          <div class="cat-bg-img" style="background-image:url('pictures/derin_yemek_odası_2.jpeg')"></div>
+          <div class="cat-overlay"></div>
+          <div class="cat-content">
+            <div class="cat-icon">🪑</div>
+            <h3>Yemek Odası</h3>
+            <p>Masa &amp; Sandalye &amp; Büfe</p>
+            <span class="cat-count">Derin Koleksiyonu</span>
+          </div>
+        </div>
+        <div class="cat-card cat-bedroom" onclick="scrollToProduct('latte')">
+          <div class="cat-bg-img" style="background-image:url('pictures/latte_yata_odası_2.jpeg')"></div>
+          <div class="cat-overlay"></div>
+          <div class="cat-content">
+            <div class="cat-icon">🛏️</div>
+            <h3>Yatak Odası</h3>
+            <p>Karyola &amp; Gardırop &amp; Komodin</p>
+            <span class="cat-count">Latte Koleksiyonu</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       PRODUCTS / COLLECTIONS
+  ═══════════════════════════════════════════════ -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Koleksiyonlarımız</p>
+        <h2 class="section-title">Öne Çıkan<br />Ürünler</h2>
+      </div>
+
+      <!-- ── ÜRÜN 1: VERONA KOLTUK TAKIMI ── -->
+      <div class="product-showcase" id="verona">
+        <div class="product-gallery">
+          <!-- Ana resim -->
+          <div class="gallery-main">
+            <img
+              id="veronaMain"
+              src="pictures/Verona_koltuk_takımı_1.jpeg"
+              alt="Verona Koltuk Takımı"
+              class="gallery-main-img"
+            />
+            <div class="gallery-zoom-hint">🔍 Yakınlaştır</div>
+            <div class="gallery-nav">
+              <button class="gal-prev" onclick="galPrev('verona')" aria-label="Önceki">&#8249;</button>
+              <button class="gal-next" onclick="galNext('verona')" aria-label="Sonraki">&#8250;</button>
+            </div>
+          </div>
+          <!-- Küçük görseller -->
+          <div class="gallery-thumbs">
+            <img src="pictures/Verona_koltuk_takımı_1.jpeg" alt="Verona 1" class="thumb active" onclick="setGallery('verona',0,this)" />
+            <img src="pictures/Verona_koltuk_takımı_2.jpeg" alt="Verona 2" class="thumb" onclick="setGallery('verona',1,this)" />
+            <img src="pictures/Verona_koltuk_takımı_3.jpeg" alt="Verona 3" class="thumb" onclick="setGallery('verona',2,this)" />
+            <img src="pictures/Verona_koltuk_takımı_4.jpeg" alt="Verona 4" class="thumb" onclick="setGallery('verona',3,this)" />
+            <img src="pictures/Verona_koltuk_takımı_5.jpeg" alt="Verona 5" class="thumb" onclick="setGallery('verona',4,this)" />
+          </div>
+        </div>
+
+        <div class="product-detail">
+          <div class="product-brand-tag">YUVAM MOBİLYA</div>
+          <h2 class="product-title">Verona Koltuk Takımı</h2>
+          <p class="product-collection-tag">Salon Koleksiyonu</p>
+          <div class="product-rating-row">
+            <span class="stars">★★★★★</span>
+            <span class="rating-num">4.9</span>
+            <span class="rating-count">(127 değerlendirme)</span>
+          </div>
+          <p class="product-description">
+            İtalyan esintili Verona Koltuk Takımı, yumuşak boucle kumaşı ve zarif altın metal detaylarıyla salonunuza karakter katıyor.
+            Premium şasi yapısı ve yüksek yoğunluklu sünger dolgu ile uzun yıllar konfor sunuyor.
+          </p>
+          <div class="product-features">
+            <div class="feature-item"><span class="fi-icon">✓</span> Boucle Kumaş Kaplama</div>
+            <div class="feature-item"><span class="fi-icon">✓</span> Altın Krom Çelik Ayaklar</div>
+            <div class="feature-item"><span class="fi-icon">✓</span> HR Sünger Dolgu</div>
+            <div class="feature-item"><span class="fi-icon">✓</span> 5 Renk Seçeneği</div>
+            <div class="feature-item"><span class="fi-icon">✓</span> Özelleştirilebilir Ölçü</div>
+            <div class="feature-item"><span class="fi-icon">✓</span> 5 Yıl Garanti</div>
+          </div>
+          <div class="price-block">
+            <div class="price-main">
+              <span class="price-old">34.990 ₺</span>
+              <span class="price-now">28.990 ₺</span>
+              <span class="price-badge">%17 İndirim</span>
+            </div>
+            <div class="price-installment">veya <strong>2.416 ₺ × 12 taksit</strong></div>
+          </div>
+          <div class="product-actions-row">
+            <button class="btn btn-add-cart" onclick="addToCart(1,'Verona Koltuk Takımı',28990,'🛋️')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              Sepete Ekle
+            </button>
+            <button class="btn btn-buy-now" onclick="openPayment(1,'Verona Koltuk Takımı',28990)">Hemen Satın Al</button>
+            <button class="btn btn-wishlist wishlist-toggle" data-id="1" title="Favoriye Ekle">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+          </div>
+          <div class="trust-row">
+            <span>🚚 Ücretsiz Teslimat</span>
+            <span>🔧 Ücretsiz Montaj</span>
+            <span>↩️ 30 Gün İade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- ── ÜRÜN 2: DERİN YEMEK ODASI ── -->
+      <div class="product-showcase product-showcase-reverse" id="derin">
+        <div class="product-gallery">
+          <div class="gallery-main">
+            <img
+              id="derinMain"
+              src="pictures/derin_yemek_odası_1.jpeg"
+              alt="Derin Yemek Odası Takımı"
+              class="gallery-main-img"
+            />
+            <div class="gallery-zoom-hint">🔍 Yakınlaştır</div>
+            <div class="gallery-nav">
+              <button class="gal-prev" onclick="galPrev('derin')" aria-label="Önceki">&#8249;</button>
+              <button class="gal-next" onclick="galNext('derin')" aria-label="Sonraki">&#8250;</button>
+            </div>
+          </div>
+          <div class="gallery-thumbs">
+            <img src="pictures/derin_yemek_odası_1.jpeg" alt="Derin 1" class="thumb active" onclick="setGallery('derin',0,this)" />
+            <img src="pictures/derin_yemek_odası_2.jpeg" alt="Derin 2" class="thumb" onclick="setGallery('derin',1,this)" />
+            <img src="pictures/derin_yemek_odası_3.jpeg" alt="Derin 3" class="thumb" onclick="setGallery('derin',2,this)" />
+            <img src="pictures/derin_yemek_odası_4.jpeg" alt="Derin 4" class="thumb" onclick="setGallery('derin',3,this)" />
+          </div>
+        </div>
+
+        <div class="product-detail">
+          <div class="product-brand-tag">YUVAM MOBİLYA</div>
+          <h2 class="product-title">Derin Yemek Odası</h2>
+          <p class="product-collection-tag">Yemek Odası Koleksiyonu</p>
+          <div class="product-rating-row">
+            <span class="stars">★★★★★</span>
+            <span class="rating-num">4.8</span>
+            <span class="rating-count">(84 değerlendirme)</span>
+          </div>
+          <p class="product-description">
+            Derin Yemek Odası Takımı; oval masif meşe masası, ünik sütun ayakları ve eşleşen sandalyeleriyle sofistike bir yemek deneyimi sunar.
+            Büfe ve ayna seti takımı tamamlıyor.
+          </p>
+          <div class="product-features">
+            <div class="feature-item"><span class="fi-icon">✓</span> Masif Meşe Masa Yüzeyi</div>
+            <div class="feature-item"><span class="fi-icon">✓</span> Sütun Tasarımlı Ayaklar</div>
+            <div class="feature-item"><span class="fi-icon">✓</span> 6 Adet Sandalye Dahil</div>
+            <div class="feature-item"><span class="fi-icon">✓</span> Büfe + Ayna Seti</div>
+            <div class="feature-item"><span class="fi-icon">✓</span> Genişletilebilir Masa</div>
+            <div class="feature-item"><span class="fi-icon">✓</span> 5 Yıl Garanti</div>
+          </div>
+          <div class="price-block">
+            <div class="price-main">
+              <span class="price-old">52.500 ₺</span>
+              <span class="price-now">39.900 ₺</span>
+              <span class="price-badge">%25 İndirim</span>
+            </div>
+            <div class="price-installment">veya <strong>3.325 ₺ × 12 taksit</strong></div>
+          </div>
+          <div class="product-actions-row">
+            <button class="btn btn-add-cart" onclick="addToCart(2,'Derin Yemek Odası',39900,'🪑')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              Sepete Ekle
+            </button>
+            <button class="btn btn-buy-now" onclick="openPayment(2,'Derin Yemek Odası',39900)">Hemen Satın Al</button>
+            <button class="btn btn-wishlist wishlist-toggle" data-id="2" title="Favoriye Ekle">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+          </div>
+          <div class="trust-row">
+            <span>🚚 Ücretsiz Teslimat</span>
+            <span>🔧 Ücretsiz Montaj</span>
+            <span>↩️ 30 Gün İade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- ── ÜRÜN 3: LATTE YATAK ODASI ── -->
+      <div class="product-showcase" id="latte">
+        <div class="product-gallery">
+          <div class="gallery-main">
+            <img
+              id="latteMain"
+              src="pictures/latte_yata_odası_1.jpeg"
+              alt="Latte Yatak Odası Takımı"
+              class="gallery-main-img"
+            />
+            <div class="gallery-zoom-hint">🔍 Yakınlaştır</div>
+            <div class="gallery-nav">
+              <button class="gal-prev" onclick="galPrev('latte')" aria-label="Önceki">&#8249;</button>
+              <button class="gal-next" onclick="galNext('latte')" aria-label="Sonraki">&#8250;</button>
+            </div>
+          </div>
+          <div class="gallery-thumbs">
+            <img src="pictures/latte_yata_odası_1.jpeg" alt="Latte 1" class="thumb active" onclick="setGallery('latte',0,this)" />
+            <img src="pictures/latte_yata_odası_2.jpeg" alt="Latte 2" class="thumb" onclick="setGallery('latte',1,this)" />
+            <img src="pictures/latte_yata_odası_3.jpeg" alt="Latte 3" class="thumb" onclick="setGallery('latte',2,this)" />
+            <img src="pictures/latte_yata_odası_4.jpeg" alt="Latte 4" class="thumb" onclick="setGallery('latte',3,this)" />
+            <img src="pictures/latte_yata_odası_5.jpeg" alt="Latte 5" class="thumb" onclick="setGallery('latte',4,this)" />
+            <img src="pictures/latte_yata_odası_6.jpeg" alt="Latte 6" class="thumb" onclick="setGallery('latte',5,this)" />
+            <img src="pictures/latte_yata_odası_7.jpeg" alt="Latte 7" class="thumb" onclick="setGallery('latte',6,this)" />
+            <img src="pictures/latte_yata_odası_8.jpeg" alt="Latte 8" class="thumb" onclick="setGallery('latte',7,this)" />
+            <img src="pictures/latte_yata_odası_9.jpeg" alt="Latte 9" class="thumb" onclick="setGallery('latte',8,this)" />
+          </div>
+        </div>
+
+        <div class="product-detail">
+          <div class="product-brand-tag">YUVAM MOBİLYA</div>
+          <h2 class="product-title">Latte Yatak Odası</h2>
+          <p class="product-collection-tag">Yatak Odası Koleksiyonu</p>
+          <div class="product-rating-row">
+            <span class="stars">★★★★★</span>
+            <span class="rating-num">4.9</span>
+            <span class="rating-count">(203 değerlendirme)</span>
+          </div>
+          <p class="product-description">
+            Latte Yatak Odası Takımı; modern şerit LED aydınlatmalı başlık, amber bronz aynalı gardırop ve premium boucle kaplama ile
+            sizi lüks bir otel odasında hissettiriyor. Tam set fiyatına makyaj masası da dahil.
+          </p>
+          <div class="product-features">
+            <div class="feature-item"><span class="fi-icon">✓</span> LED Işıklı Başlıklı Karyola</div>
+            <div class="feature-item"><span class="fi-icon">✓</span> Amber Bronz Gardırop</div>
+            <div class="feature-item"><span class="fi-icon">✓</span> 2 Adet Komodin Dahil</div>
+            <div class="feature-item"><span class="fi-icon">✓</span> Makyaj Masası + Puf</div>
+            <div class="feature-item"><span class="fi-icon">✓</span> Boucle Kaplama Başlık</div>
+            <div class="feature-item"><span class="fi-icon">✓</span> 5 Yıl Garanti</div>
+          </div>
+          <div class="price-block">
+            <div class="price-main">
+              <span class="price-old">89.000 ₺</span>
+              <span class="price-now">69.900 ₺</span>
+              <span class="price-badge">%21 İndirim</span>
+            </div>
+            <div class="price-installment">veya <strong>5.825 ₺ × 12 taksit</strong></div>
+          </div>
+          <div class="product-actions-row">
+            <button class="btn btn-add-cart" onclick="addToCart(3,'Latte Yatak Odası',69900,'🛏️')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              Sepete Ekle
+            </button>
+            <button class="btn btn-buy-now" onclick="openPayment(3,'Latte Yatak Odası',69900)">Hemen Satın Al</button>
+            <button class="btn btn-wishlist wishlist-toggle" data-id="3" title="Favoriye Ekle">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+          </div>
+          <div class="trust-row">
+            <span>🚚 Ücretsiz Teslimat</span>
+            <span>🔧 Ücretsiz Montaj</span>
+            <span>↩️ 30 Gün İade</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       WHY US
+  ═══════════════════════════════════════════════ -->
+  <section class="features-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Neden Yuvam?</p>
+        <h2 class="section-title">Kaliteyi Hissettiren<br />Fark</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="1"/><circle cx="12" cy="16" r="1"/></svg>
+          </div>
+          <h3>Ücretsiz Teslimat</h3>
+          <p>Türkiye'nin her yerine kapınıza kadar ücretsiz kurulum ve nakliye hizmeti.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Ücretsiz Montaj</h3>
+          <p>Uzman ekibimiz siparişinizi evinizde monte ederek kullanıma hazır hale getirir.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>5 Yıl Garanti</h3>
+          <p>Tüm ürünlerimiz 5 yıl fabrika garantisi kapsamında, içiniz rahat olsun.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4"/></svg>
+          </div>
+          <h3>30 Gün İade</h3>
+          <p>Beğenmediğiniz ürünü 30 gün içinde ücretsiz iade edebilirsiniz. Koşulsuz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       TESTIMONIALS
+  ═══════════════════════════════════════════════ -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Müşteri Yorumları</p>
+        <h2 class="section-title">Mutlu Müşteriler<br />Konuşuyor</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Verona koltuk takımını aldık, kalitesi beklentimizin çok üzerinde çıktı. Montaj ekibi de çok profesyoneldi."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AY</div>
+            <div class="author-info"><strong>Ayşe Yılmaz</strong><span>İstanbul · Verona Koltuk</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Derin Yemek Odası setini sipariş ettik. Masanın kalitesi ve oval tasarımı mükemmel. Kesinlikle tavsiye ediyorum!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MK</div>
+            <div class="author-info"><strong>Mehmet Kaya</strong><span>Ankara · Derin Yemek</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Latte Yatak Odası gerçekten hayran bıraktı. Gardırobun bronz detayları ve LED başlık çok şık. Teşekkürler!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">ZD</div>
+            <div class="author-info"><strong>Zeynep Demir</strong><span>İzmir · Latte Yatak</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════════ -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="section-tag">İletişim</p>
+          <h2>Bizimle<br />İletişime Geçin</h2>
+          <p class="contact-desc">Sorularınız, özel sipariş talepleriniz veya showroom ziyareti için bize ulaşın. Uzman danışmanlarımız yardıma hazır.</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div><strong>Adres</strong><p>Hacı Seyit Ali, 202. Sk. No:59, 42370 Seydişehir/Konya</p></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div><strong>Telefon</strong><p>0532 275 41 00</p></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div><strong>E-posta</strong><p>info@yuvammobilya.com.tr</p></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div><strong>Çalışma Saatleri</strong><p>Pzt–Cmt: 09:00 – 19:00</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm" onsubmit="submitContact(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Ad Soyad</label>
+                <input type="text" id="contactName" placeholder="Adınız Soyadınız" required />
+              </div>
+              <div class="form-group">
+                <label for="contactPhone">Telefon</label>
+                <input type="tel" id="contactPhone" placeholder="05XX XXX XX XX" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">E-posta</label>
+              <input type="email" id="contactEmail" placeholder="ornek@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Konu</label>
+              <select id="contactSubject">
+                <option>Ürün Bilgisi</option>
+                <option>Sipariş Takibi</option>
+                <option>Showroom Ziyareti</option>
+                <option>Toplu Sipariş</option>
+                <option>Diğer</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Mesajınız</label>
+              <textarea id="contactMessage" rows="4" placeholder="Size nasıl yardımcı olabiliriz?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Mesaj Gönder
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <!-- Footer Logo -->
+          <div class="footer-logo-wrap">
+            <img src="pictures/yuvam_mobilya_logo.png" alt="Yuvam Mobilya" class="logo-img" style="height: 32px; object-fit: contain;">
+          </div>
+          <p>18 yıllık tecrübemizle Türkiye'nin her köşesine kaliteli ve şık mobilya sunuyoruz.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Instagram" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Facebook" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="YouTube" title="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.6C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Pinterest" title="Pinterest">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.852 0 1.265.64 1.265 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.806 1.476 1.806 1.772 0 3.136-1.867 3.136-4.562 0-2.387-1.715-4.055-4.163-4.055-2.836 0-4.498 2.127-4.498 4.328 0 .856.33 1.775.741 2.276a.3.3 0 0 1 .069.286c-.076.312-.243.995-.276 1.134-.044.183-.146.222-.336.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.966-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Koleksiyonlar</h4>
+          <ul>
+            <li><a href="#verona">Verona Koltuk Takımı</a></li>
+            <li><a href="#derin">Derin Yemek Odası</a></li>
+            <li><a href="#latte">Latte Yatak Odası</a></li>
+            <li><a href="#products">Tüm Koleksiyonlar</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kurumsal</h4>
+          <ul>
+            <li><a href="#about">Hakkımızda</a></li>
+            <li><a href="#contact">İletişim</a></li>
+            <li><a href="#">Kariyer</a></li>
+            <li><a href="#">Showroom</a></li>
+            <li><a href="#">Basın</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Müşteri Hizmetleri</h4>
+          <ul>
+            <li><a href="#">Sipariş Takibi</a></li>
+            <li><a href="#">İade &amp; Değişim</a></li>
+            <li><a href="#">Garanti Koşulları</a></li>
+            <li><a href="#">SSS</a></li>
+            <li><a href="#">Gizlilik Politikası</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2024 Yuvam Mobilya. Tüm hakları saklıdır.</p>
+        <div class="payment-icons">
+          <span class="pay-icon">VISA</span>
+          <span class="pay-icon">MC</span>
+          <span class="pay-icon">TROY</span>
+          <span class="pay-icon">İYZİCO</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════
+       CART SIDEBAR
+  ═══════════════════════════════════════════════ -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="sidebar-header">
+      <h3>Sepetim <span id="cartItemCount">(0)</span></h3>
+      <button class="sidebar-close" id="cartClose" aria-label="Kapat">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart">
+        <div class="empty-icon">🛒</div>
+        <p>Sepetiniz boş</p>
+        <span>Beğendiğiniz ürünleri sepete ekleyin</span>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total-row"><span>Ara Toplam</span><span id="cartSubtotal">0 ₺</span></div>
+      <div class="cart-total-row"><span>Kargo</span><span class="free-ship">Ücretsiz</span></div>
+      <div class="cart-total-row total-row">
+        <span><strong>Toplam</strong></span>
+        <span id="cartTotal"><strong>0 ₺</strong></span>
+      </div>
+      <button class="btn btn-primary btn-full" onclick="openCartPayment()">Güvenli Ödemeye Geç →</button>
+      <button class="btn btn-outline btn-full" onclick="closeCart()">Alışverişe Devam Et</button>
+    </div>
+  </div>
+  <div class="overlay-bg" id="overlayBg"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       PAYMENT MODAL
+  ═══════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="paymentModal">
+    <div class="modal" id="paymentModalBox">
+      <button class="modal-close" id="paymentClose" aria-label="Kapat">✕</button>
+      <div class="modal-inner">
+        <div class="modal-steps">
+          <div class="modal-step active" id="step1"><div class="step-num">1</div><span>Teslimat</span></div>
+          <div class="step-connector"></div>
+          <div class="modal-step" id="step2"><div class="step-num">2</div><span>Ödeme</span></div>
+          <div class="step-connector"></div>
+          <div class="modal-step" id="step3"><div class="step-num">3</div><span>Onay</span></div>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="payment-step" id="payStep1">
+          <h3>Teslimat Bilgileri</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Ad</label><input type="text" id="payFirstName" placeholder="Adınız" /></div>
+            <div class="form-group"><label>Soyad</label><input type="text" id="payLastName" placeholder="Soyadınız" /></div>
+          </div>
+          <div class="form-group"><label>Telefon</label><input type="tel" id="payPhone" placeholder="05XX XXX XX XX" /></div>
+          <div class="form-group"><label>E-posta</label><input type="email" id="payEmail" placeholder="ornek@email.com" /></div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>İl</label>
+              <select id="payCity">
+                <option>İstanbul</option><option>Ankara</option><option>İzmir</option>
+                <option>Bursa</option><option>Antalya</option><option>Adana</option>
+              </select>
+            </div>
+            <div class="form-group"><label>İlçe</label><input type="text" id="payDistrict" placeholder="İlçe" /></div>
+          </div>
+          <div class="form-group"><label>Adres</label><textarea id="payAddress" rows="2" placeholder="Mahalle, cadde, sokak, kapı no"></textarea></div>
+          <button class="btn btn-primary btn-full" onclick="goToStep2()">Devam Et →</button>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="payment-step hidden" id="payStep2">
+          <h3>Ödeme Bilgileri</h3>
+          <div class="card-visual">
+            <div class="card-chip">▦</div>
+            <div class="card-number-display" id="cardNumDisplay">•••• •••• •••• ••••</div>
+            <div class="card-meta">
+              <div><span>Kart Sahibi</span><div id="cardNameDisplay">AD SOYAD</div></div>
+              <div><span>Son Kullanma</span><div id="cardExpDisplay">MM/YY</div></div>
+            </div>
+            <div class="card-logo">VISA</div>
+          </div>
+          <div class="form-group">
+            <label>Kart Numarası</label>
+            <input type="text" id="cardNumber" placeholder="•••• •••• •••• ••••" maxlength="19" oninput="formatCard(this)" />
+          </div>
+          <div class="form-group">
+            <label>Kart Üzerindeki Ad</label>
+            <input type="text" id="cardName" placeholder="AD SOYAD" oninput="updateCardDisplay()" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Son Kullanma</label>
+              <input type="text" id="cardExp" placeholder="MM/YY" maxlength="5" oninput="formatExp(this)" />
+            </div>
+            <div class="form-group">
+              <label>CVV</label>
+              <input type="text" id="cardCVV" placeholder="•••" maxlength="3" />
+            </div>
+          </div>
+          <div class="installment-options">
+            <label><strong>Taksit Seçeneği</strong></label>
+            <div class="installment-grid">
+              <label class="inst-option"><input type="radio" name="inst" value="1" checked /><span>Peşin</span></label>
+              <label class="inst-option"><input type="radio" name="inst" value="3" /><span>3 Taksit</span></label>
+              <label class="inst-option"><input type="radio" name="inst" value="6" /><span>6 Taksit</span></label>
+              <label class="inst-option"><input type="radio" name="inst" value="9" /><span>9 Taksit</span></label>
+              <label class="inst-option"><input type="radio" name="inst" value="12" /><span>12 Taksit</span></label>
+            </div>
+          </div>
+          <div class="order-summary">
+            <div class="summary-row"><span id="summaryProduct">Ürün</span><span id="summaryPrice">0 ₺</span></div>
+            <div class="summary-row"><span>Kargo</span><span class="free-ship">Ücretsiz</span></div>
+            <div class="summary-row summary-total"><strong>Toplam</strong><strong id="summaryTotal">0 ₺</strong></div>
+          </div>
+          <div class="secure-badges">
+            <span>🔒 256-bit SSL Güvenli Ödeme</span>
+            <span>✓ 3D Secure</span>
+          </div>
+          <div class="modal-btn-row">
+            <button class="btn btn-outline" onclick="backToStep1()">← Geri</button>
+            <button class="btn btn-primary" onclick="processPayment()">Ödemeyi Tamamla 🔒</button>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="payment-step hidden" id="payStep3">
+          <div class="success-animation">
+            <div class="success-circle">
+              <svg width="60" height="60" viewBox="0 0 60 60">
+                <circle cx="30" cy="30" r="28" fill="none" stroke="#22c55e" stroke-width="3" class="success-ring"/>
+                <polyline points="18,30 26,38 42,22" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" class="success-check"/>
+              </svg>
+            </div>
+            <h3>Siparişiniz Alındı!</h3>
+            <p>Sipariş numaranız: <strong id="orderNumber">#YM-000001</strong></p>
+            <p>Onay e-postası gönderildi. 3–7 iş günü içinde teslim edilecek.</p>
+            <div class="success-details" id="successDetails"></div>
+            <button class="btn btn-primary" onclick="closePayment()">Alışverişe Devam Et</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
